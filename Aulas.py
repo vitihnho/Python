@@ -71,5 +71,21 @@ else:
     print("Você não digitou nenhuma das opções")
 
 
+#CONDIÇÃO COM OPERADORES
+numero1 = int(input("Primeiro número: "))
+numero2 = int(input("Segundo número: "))
 
+if numero1 >= numero2:
+    print(f"{numero1} é maior ou igual a {numero2}")
+else:
+    print(f"{numero2} é maior do que o {numero1}")
 
+#OPERADOR LÓGICO AND
+
+opcao = input("SIM OU NÃO: ")
+senha_dig = int(input("Digite sua senha: "))
+
+if opcao == "SIM" and senha_dig == 123:
+    print("Parabéns, vc entrou")
+else:
+    print("Tenta dnv")
