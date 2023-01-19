@@ -27,7 +27,7 @@ print(f'{nome:$<12}') #ESQUERDA
     #Formatação de números, colocando vírcula e escolhendo as casas decimais.
     
 valor = 1000.50
-print(f'Valor é de: {valor:,.1f}')
+print(f'{valor=:,.1f}') #Quando atribuímos igual na frente da variável, o nome dela vem junto ao valor.
 
     #Fatiamento de strings | Função len
 
