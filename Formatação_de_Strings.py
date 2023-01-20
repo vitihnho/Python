@@ -74,3 +74,12 @@ print(var)
 var = 20
 teste = 'O hexadecimal de %d é %08X' % (var,var)
 print(teste)
+
+#Trocar a saída da string
+
+string = input('Digite seu nome: ')
+nova_string = str.lower(string) #Transforma todo conteúdo do texto em letras minusculas.
+print(nova_string)
+
+teste = nova_string.startswith('v') #Devolve verdadeiro ou falso se a string começa ou não com a letra indicada.
+print(teste)
