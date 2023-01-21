@@ -251,42 +251,36 @@ print(x)
 #EXERCÍCIO 6#
 
 frase_secreta = 'RIBEIRAO'
-print(frase_secreta.find('A',0))
-
-#teste = frase_secreta[0:5] + 'x' + frase_secreta[6:]
-#print(teste)
 
 for frase_oculta in frase_secreta:
     frase_oculta = '*' * len(frase_secreta)
 
-x = 0
-"""frase_oculta = frase_oculta[0:0] + letra + frase_oculta[1:]
-frase_oculta = frase_oculta[0:5] + letra + frase_oculta[6:]
 print(frase_oculta)
-while x < len(frase_secreta):
-                
-    indice = frase_secreta.find(letra, x)
-    print(indice)
-    frase_oculta = frase_oculta[0:(indice - 1)] + letra + frase_oculta[indice:]
-    x += 1"""
 
-
-print(frase_oculta)
+qtd_tentativas = 0
 
 while frase_oculta != frase_secreta:
 
-    try:
+    while True:
+
         letra = str(input('Informe uma letra: ')).upper()
 
-        if len(letra) > 1:
+        qtd_tentativas += 1
+
+        if letra in ('0','1','2','3','4','5','6','7','8','9'):
+            print('Informe apenas letras.')
+            continue
+        elif len(letra) > 1:
             print('Apenas UMA letra')
             continue
-
-    except:
-        print('Informe apenas letras')
-        continue
-
+        elif letra == "":
+            print("Digite algo!")
+            continue
+        else:
+            break
+        
     x = 0
+
     while True:
 
         if letra in frase_secreta:
@@ -296,10 +290,10 @@ while frase_oculta != frase_secreta:
                 indice = frase_secreta.find(letra, x)
 
                 if indice == -1:
-                    print('Tente novamente')
                     break
                 else:
                     frase_oculta = frase_oculta[0:(indice)] + letra + frase_oculta[indice+1:]
+  
                 x += 1
         else:
             print('Tente novamente')
@@ -308,4 +302,6 @@ while frase_oculta != frase_secreta:
 
         break
 
-        
+print('VOCÊ GANHOU')
+print(f'A frase oculta é "{frase_oculta}"')
+print(f'A quantidade de tentativas foi de {qtd_tentativas}')
