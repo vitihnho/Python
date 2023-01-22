@@ -250,6 +250,8 @@ print(x)
 
 #EXERCÍCIO 6#
 
+import os
+
 frase_secreta = 'RIBEIRAO'
 
 for frase_oculta in frase_secreta:
@@ -302,6 +304,7 @@ while frase_oculta != frase_secreta:
 
         break
 
+os.system('cls') #LIMPA O TERMINAL
 print('VOCÊ GANHOU')
 print(f'A frase oculta é "{frase_oculta}"')
 print(f'A quantidade de tentativas foi de {qtd_tentativas}')

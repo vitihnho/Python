@@ -62,3 +62,16 @@ string_teste = "Victor Hugo"
 
 string_teste2 = f'{string_teste[:3]}abc{string_teste[3:]}'
 print(string_teste2)
+
+#LIST#
+
+#Para criar uma lista é necessário atribuir chaves.
+
+lista = []
+print(type(lista))
+
+lista = ['Victor',18,'Analista'] #Podemos atribuir n variáveis dentro de uma lista e com tipos diferentes.
+print(lista[2]) #Retornar o valor separadamente trazendo o indice como parâmetro.
+lista[2] = 'O melhor' #Alterar o valor através do parâmetro.
+print(lista[2])
+
