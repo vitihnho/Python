@@ -308,3 +308,52 @@ os.system('cls') #LIMPA O TERMINAL
 print('VOCÊ GANHOU')
 print(f'A frase oculta é "{frase_oculta}"')
 print(f'A quantidade de tentativas foi de {qtd_tentativas}')
+
+#EXERCÍCIO 7#
+
+lista = ["Victor","Maria","Birigo"]
+
+for indice, produto in lista:
+    print(indice, produto)
+for indice in [0, 1, 2]:
+    print(indice)
+
+#EXERCÍCIO 8#
+
+import os
+lista = []
+
+while True:
+    
+    opcao = input('Selecione uma das opções\n[i]nserir, [a]pagar, [l]istar: ')
+
+    if opcao == 'i':
+        os.system('cls')
+        valor = input('Informe o valor: ')
+            
+        if valor == "":
+            print('Informe um valor')
+            continue
+        else:
+            lista.append(valor)
+
+    elif opcao == 'a':
+
+        os.system('cls')
+
+        indice = int(input('Informe o indice à ser retirado: '))
+
+        if len(lista) < indice:
+            print('Indice Inválido')
+        else:
+            try:
+                lista.pop(indice)
+            except:
+                print('Lista Vazia')
+
+    elif opcao == 'l':
+        os.system('cls')
+        lista_numerada = list(enumerate(lista))
+
+        for indice, produto in enumerate(lista):
+            print(indice, produto)
