@@ -72,6 +72,80 @@ print(type(lista))
 
 lista = ['Victor',18,'Analista'] #Podemos atribuir n variáveis dentro de uma lista e com tipos diferentes.
 print(lista[2]) #Retornar o valor separadamente trazendo o indice como parâmetro.
+
 lista[2] = 'O melhor' #Alterar o valor através do parâmetro.
 print(lista[2])
 
+del lista[2] #Podemos apagar o conteúdo da lista com del
+print(lista)
+
+lista.append(35) #Adiciona elemento no final da lista
+print(lista)
+
+lista.pop() #Remove o último elemento da lista
+del lista[-1] #Remove o último elemento da lista
+print(lista)
+
+lista.clear() #Remove todos os elementos da lista
+print(lista)
+
+lista.insert(0,"Calica") #Adiciona o elemento na posição informada, se já existir algo o elemento existente é posto à frente
+print(lista)
+
+#CONCATENANDO LISTAS#
+
+lista_a = [1, 2, 3]
+lista_b = [4, 5, 6]
+lista_c = lista_a + lista_b #Concatenamos as duas listas
+print(lista_c)
+
+lista_a.extend(lista_b) #Extendemos os valores da lista_a com os valores da lista_b
+print(lista_a) #OBS: Se dermos um print na linha de cima o valor retornado será 'none', já que aquilo apenas atribui um valor e não retorna.
+
+#DESEMPACOTAR
+
+lista = ['Victor','Hugo','Ferreira']
+nome1, nome2, nome3 = lista
+print(nome2)
+
+#No caso à cima especificamos o número exato de elementos da lista para que não tenha nenhum erro.
+#Mas se só quero pegar o 1º elemento e os demais posso ignorar, consigo fazer isso.
+
+nome1, *resto = lista
+print(nome1, resto)
+
+#Geralmente quando queremos mostrar que o resto não será utilizado, usamos _
+
+nome1, *_ = lista
+print(nome1, _)
+
+#Tupla é uma lista imutável, ou seja, não conseguimos trocar seus valores.
+
+tup = 'victor','hugo','ferreira'
+tup[2] = 'oto' #Apresenta o erro por causa da sua especificação, tuplas não mudam.
+
+#ENUMERATE
+
+lista = ['Victor','Hugo','Ferreira']
+
+lista_enumerada = list(enumerate(lista)) #O enumerate númera os elementos e pode receber como parâmetro o ponto de início
+print(lista_enumerada)
+
+lista_enumerada = list(enumerate(lista, start=59))
+print(lista_enumerada)
+
+#SPLIT STRIP
+
+frase = 'O cachorro, ele é louco'
+frase_sep = frase.split(',')
+print(frase_sep)
+
+for i, frase in enumerate(frase_sep):
+    print(frase.strip())
+
+#JOIN
+#une strings
+
+frase = 'abc'
+frase_unida = '*'.join(frase)
+print(frase_unida)
