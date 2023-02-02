@@ -149,3 +149,11 @@ for i, frase in enumerate(frase_sep):
 frase = 'abc'
 frase_unida = '*'.join(frase)
 print(frase_unida)
+
+frase = ['maria','é','linda']
+print(*frase)
+#Ao usar o asterístico, selecionamos todas os campos dentro do vetor.++--
+
+#Operação Ternária
+
+print('Valor' if True else 'nValor')
