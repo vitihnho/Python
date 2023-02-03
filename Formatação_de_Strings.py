@@ -83,3 +83,12 @@ print(nova_string)
 
 teste = nova_string.startswith('v') #Devolve verdadeiro ou falso se a string começa ou não com a letra indicada.
 print(teste)
+
+#Replace
+
+cpf = '537.559.843-84' \
+    .replace('.',"") \
+    .replace('-',"")
+
+print(cpf)
+

@@ -357,3 +357,32 @@ while True:
 
         for indice, produto in enumerate(lista):
             print(indice, produto)
+            
+    break
+
+#EXERCÍCIO 9#
+
+digitos = input('Informe os 9 primeiros dígitos do seu CPF: ')
+
+if len(digitos) > 9:
+    print(f'Informe apenas 9 digitos você digitou {len(digitos)} digitos.')
+else:
+    num1, num2, num3, num4, num5, num6, num7, num8, num9 = digitos
+    total = (int(num1) * 10) +( int(num2) * 9) + (int(num3) * 8) + (int(num4) * 7) +( int(num5) * 6) +( int(num6) * 5 )+ (int(num7) * 4 )+ (int(num8) * 3) +( int(num9) * 2)
+    
+    primeiro_digito = (total * 10) % 11
+
+    if primeiro_digito > 9:
+        primeiro_digito = 0
+
+    print(primeiro_digito)
+
+    total2 = (int(num1) * 11) +( int(num2) * 10) + (int(num3) * 9) + (int(num4) * 8) +( int(num5) * 7) +( int(num6) * 6 )+ (int(num7) * 5 )+ (int(num8) * 4) +( int(num9) * 3) + (int(primeiro_digito) * 2)
+
+    segundo_digito = (total2 * 10) % 11
+
+    print(segundo_digito)
+
+    
+
+
