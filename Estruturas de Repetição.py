@@ -22,3 +22,15 @@ while x < 10:
         continue #Dessa forma o número 5 não aparece na execução!
 
     print(x)
+
+#FOR#
+
+nome = 'Victor'
+
+for letra in nome:
+    print(letra)
+
+#RANGE range(start, stop, step)
+
+for numero in range(1, 10, 2):
+    print(numero)

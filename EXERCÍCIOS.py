@@ -383,6 +383,27 @@ else:
 
     print(segundo_digito)
 
+#EXERCÍCIO 10#
+
+def mult(*num):
+    total = 1
+
+    for numero in num:
+        total *= numero
+
+    return total
+
+multiplica = mult(1,3,5)
+print(multiplica)
+
+def tipo(multiplica):
+
+    if multiplica % 2 == 0:
+        print(f'Número {multiplica} é par!')
+    else:
+        print(f'Número {multiplica} é ímpar!')
+
+tipo(multiplica)
     
 
 
