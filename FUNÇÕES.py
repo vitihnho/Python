@@ -37,7 +37,7 @@ print(soma_acumulada)
 print(sum((1,23,4,353,6))) #O sum recebe apenas 1 argumento, então devemos delimitar o conteúdo como em uma tupla.
 
 #HIGHER ORDER FUNCTION
-
+    #Funções que recebem outras funções e podem retorná-las
 
 
 

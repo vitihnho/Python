@@ -405,5 +405,18 @@ def tipo(multiplica):
 
 tipo(multiplica)
     
+#EXERCÍCIO 11#
 
+def duplicar(numero):
+    return numero * 2
 
+n2 = duplicar(3)
+print(n2)
+
+def multiplicador(multp):
+    def multiplicar(numero):
+        return numero * multp
+    return multiplicar
+
+n2 = multiplicador(3)
+print(n2(3))

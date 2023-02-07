@@ -157,3 +157,42 @@ print(*frase)
 #Operação Ternária
 
 print('Valor' if True else 'nValor')
+
+#DICIONÁRIO (Dict)
+
+pessoa = {
+
+    'nome': 'Victor',
+    'sobrenome': 'Ferreira',
+    'idade': 18,
+    'altura': 1.8,
+
+}
+
+print(pessoa, type(pessoa))
+print(pessoa['nome'])
+
+#Podemos editar, apagar e inserir novos dados dentro do dicionário.
+
+pessoa = {}
+
+chave = 'nome'
+
+pessoa[chave] = 'Victor Hugo'
+
+print(pessoa)
+
+pessoa['sobrenome'] = 'Ferreira'
+
+print(pessoa)
+
+del pessoa['sobrenome']
+
+print(pessoa)
+
+#Podemos verificar a existência de um valor dentro do dicionário.
+
+if pessoa.get('nome') is None:
+    print('VAZIO')
+else:
+    print(f'O nome é {pessoa["nome"]}')
