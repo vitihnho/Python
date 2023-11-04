@@ -420,3 +420,56 @@ def multiplicador(multp):
 
 n2 = multiplicador(3)
 print(n2(3))
+
+#EXERCÍCIO 12#
+
+perguntas = [
+
+    {
+        'Pergunta': 'Quem parece um coala, mas nem do plata terra é?',
+        'Opções': ['Stitch','Pikachu','Pairulito'],
+        'Resposta': 'Stitch',
+    },
+
+    {
+        'Pergunta': 'Onde somos todos atletas?',
+        'Opções': ['Em casa','Na Academia','Na Growth'],
+        'Resposta': 'Na Growth',
+    },
+
+    {
+        'Pergunta': 'Sou proibido igual poze do rodo na...',
+        'Opções': ['Igreja','Televisão','Cadeia'],
+        'Resposta': 'Televisão'
+    },
+
+]
+
+qtd_acertos = 0
+acertou = False
+for perguntas in perguntas:
+    print('Pergunta:', perguntas['Pergunta'])
+    print()
+
+    opcoes = perguntas['Opções']
+    for i, opcao in enumerate(opcoes):
+        print(f'{i}) {opcao}')
+    print()
+
+    escolha = input('Escolha uma das opções: ')
+
+    if escolha.isdigit():
+        escolha_int = int(escolha)
+
+    if escolha_int is not None:
+        if escolha_int >= 0 and escolha_int < len(opcoes):
+            if opcoes[escolha_int] == perguntas['Resposta']:
+                acertou = True
+                
+        if acertou:
+            qtd_acertos += 1
+            print('Você Acertou 👍')
+        else:
+            print("Você Errou 😢")
+
+print(f'Você obteve {qtd_acertos} acertos de {len(perguntas)} perguntas')

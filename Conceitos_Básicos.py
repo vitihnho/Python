@@ -196,3 +196,125 @@ if pessoa.get('nome') is None:
     print('VAZIO')
 else:
     print(f'O nome é {pessoa["nome"]}')
+
+#MÉTODOS#
+
+#len
+
+pessoa = {
+
+    'nome': 'Victor',
+    'sobrenome': 'Ferreira'
+}
+
+print(len(pessoa)) #Retorna a quantidade de chaves dentro do dicionário
+print(list(pessoa.keys())) #Retorna as chaves
+print(list(pessoa.values())) #Retorna os valores da chave
+
+pessoa.setdefault('idade', '18') #Definimos um padrão para a chave, mesmo que ela não exista.
+print(pessoa['idade']) #Dessa forma a chave é criada também.
+
+print(pessoa)
+
+#COPY
+
+d1 = {
+
+    'a': '10',
+    'b': '20'
+}
+
+d2 = d1.copy() #Dessa forma copiamos outro dicionário.
+
+d2['a'] = '23' #Se não tivessimos recebido a cópia, isso mudaria a chave dentro dos dois dicionários.
+#Mas esse método é apenas uma cópia rasa, se tivermos uma lista dentro do dicionário copiado, ele não é copiado, só aponta
+#para o mesmo lugar
+print(d1)
+print(d2)
+
+import copy
+
+#Para resolver o problema podmos usar um deepcopy, copiando todas as chaves.
+
+d3 = copy.deepcopy(d1)
+print(d3)
+
+#GET
+
+p1 = {
+    'nome': 'Victor',
+    'sobrenome': 'Ferreira',
+}
+
+print(p1.get('nome'))
+#Retorna o conteúdo, caso não exista por padrão retorna none, mas podemos especificar o que vai ser retornado
+
+print(p1.get('idade','Inexistente'))
+
+#No dicionário podemos utilizar o pop para armazenar um conteúdo e excluí-lo do dicionário.
+
+nome = p1.pop('nome')
+print(p1)
+
+#popitem remove a última chave, por conta disso não pode ser passado parâmetro.
+
+nome = p1.popitem()
+print(nome)
+
+# update atualiza o dicionário
+
+# podemos escrever assim,
+p1.update({
+
+    'nome' : 'José'
+
+})
+
+# ou assim
+p1.update(nome = 'Augusto')
+
+#Também funciona por tuplas
+
+tupla = ('nome','Renato'),
+
+p1.update(tupla) #O MESMO FUNCIONA PARA LISTAS
+print(p1)
+
+#SET
+#Muito útil para remover valores duplicados de uma lista.
+#Não promote entregar na ordem o conteúdo
+
+s1 = set('Abc')
+print(s1)
+
+lista = [1,2,33,3,3,3]
+st = set(lista)
+print(st)
+
+s2 = set()
+s2.add('Victor') #Dessa forma podemos incluir elementos dentro do nosso set
+print(s2)
+s2.add(123)
+s2.discard('Victor')
+print(s2)
+
+# O set pode ser utilizado como os conjuntos da matemática.
+
+lista1 = [1,2,3,4,5,6]
+s1 = set(lista1)
+
+lista2 = [4,5,6,89]
+s2 = set(lista2)
+
+s3 = s1 | s2 # Está em um ou eu outro
+print(s3)
+
+s3 = s1 & s2 # Está nos dois
+print(s3)
+
+s3 = s1 - s2 # Diferença do 1º com o 2º
+print(s3)
+
+s3 = s1 ^ s2 #Retorna a difença literal, todos os elementos do 2º que não está no 1°
+print(s3)
+
